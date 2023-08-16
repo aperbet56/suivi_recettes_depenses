@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suivi de vos recettes et de vos dépenses</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Suivi de vos recettes et de vos dépenses</h1>
+    </header>
+    <main class="main__content">
+      <h2>Votre solde</h2>
+      <p id="balance"></p>
+
+      <section class="income-expense__container">
+        <article>
+          <h3>Recettes</h3>
+          <p id="money-plus" class="money plus">0€</p>
+        </article>
+        <article>
+          <h3>Dépenses</h3>
+          <p id="money-minus" class="money minus">0€</p>
+        </article>
+      </section>
+
+      <h2>Historique de vos transactions</h2>
+      <ul id="list" class="list">
+        <!-- Partie en JavaScript
+          <li class="minus">
+            Cash <span>-400€</span><button class="delete__btn">x</button>
+          </li> 
+        Fin de la partie en JavaScript -->
+      </ul>
+
+      <h2>Ajoutez une nouvelle transaction</h2>
+      <form id="form">
+        <div class="form-control">
+          <label for="text">Nom de votre transaction</label>
+          <input
+            type="text"
+            id="text"
+            name="text"
+            placeholder="Entrez le nom de votre transaction..."
+          />
+        </div>
+        <div class="form-control">
+          <label for="amount"
+            >Montant <br />
+            (Ajoutez le signe moins pour les dépenses)</label
+          >
+          <input
+            type="number"
+            name="amount"
+            id="amount"
+            placeholder="Entrez le montant..."
+          />
+        </div>
+        <button class="btn">Ajoutez la transaction</button>
+      </form>
+    </main>
+    <footer>
+      <span>Site créé par aperbet56</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

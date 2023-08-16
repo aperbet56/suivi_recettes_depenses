@@ -1,0 +1,239 @@
+/**** Reset ****/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    list-style-type: none;
+}
+
+/**** Variable CSS ****/
+
+:root {
+    --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+
+/**** Style général de la page ****/
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 35px 15px;
+}
+
+.main__content {
+    flex-grow: 1;
+    width: 65%;
+}
+
+h2 {
+    font-size: 25px;
+    border-bottom: 1px solid #bbbbbb;
+    padding-bottom: 10px;
+    margin: 40px 0 20px;
+}
+  
+.income-expense__container {
+    background-color: #ffffff;
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0;
+}
+  
+.income-expense__container > article {
+    flex: 1;
+    text-align: center;
+}
+  
+.income-expense__container > article:first-of-type {
+    border-right: 1px solid #bbbbbb;
+}
+
+h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+  
+.money {
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin: 5px 0;
+}
+  
+.money.plus {
+    color: #37e680;
+}
+  
+.money.minus {
+    color: #f04532;
+}
+
+.list {
+    margin-bottom: 40px;
+}
+  
+.list li {
+    background-color: #ffffff;
+    box-shadow: var(--box-shadow);
+    color: #333333;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 15px;
+    margin: 10px 0;
+}
+  
+.list li.plus {
+    border-right: 5px solid #37e680;
+}
+  
+.list li.minus {
+    border-right: 5px solid #f04532;
+}
+
+.delete__btn {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    cursor: pointer;
+    background-color: #f84935;
+    color: #ffffff;
+    font-size: 18px;
+    width: 25px;
+    padding: 5px; 
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+  
+.list li:hover .delete__btn {
+    opacity: 1;
+}
+  
+label {
+    display: flex;
+    margin: 15px 0;
+}
+  
+input {
+    border: 1px solid #bbbbbb;
+    border-radius: 8px;
+    display: block;
+    font-size: 16px;
+    padding: 15px;
+    width: 100%;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+    appearance: textfield; /* pour enlever les flèches sur Mozilla Firefox */
+}
+
+.btn {
+    cursor: pointer;
+    border: 2px solid #9c88ff;
+    background-color: #333333; 
+    box-shadow: var(--box-shadow);
+    color: #ffffff;
+    display: block;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin: 20px 0 35px;
+    padding: 10px;
+    width: 100%;
+    height: 60px;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #9c88ff;
+  border-radius: 50% 50% 0% 0%;
+  z-index: -1;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn:hover::before {
+    top: 0;
+    border-radius: 0;
+}
+ 
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333333;
+    width: 100%;
+}
+
+footer span {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    margin: 25px 0;
+    color: #ffffff;
+}
+
+/**** Responsive design ****/
+
+@media screen and (max-width: 475px) {
+    h1 {
+        font-size: 27px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 17px;
+        padding: 0 8px;
+        font-weight: 700;
+    }
+
+    input {
+        font-size: 14px;
+    }
+
+    .delete__btn {
+        width: 20px;
+    }
+}
