@@ -92,7 +92,7 @@ const updateValues = () => {
   ).toFixed(2);
 
   // Création de la constante total pour le calcul du solde
-  const total = income - expense;
+  const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2);
 
   // Affichage du solde, des dépenses et des recettes de manière dynamique dans le DOM
   balance.textContent = `${total}€`;
