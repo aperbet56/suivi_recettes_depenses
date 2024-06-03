@@ -20,7 +20,7 @@ Lien vers le projet : https://aperbet56.github.io/suivi_recettes_depenses/
 - Utilisation des balises sémantiques HTML5
 - CSS3
 - Flexbox
-- Aniamtions CSS
+- Animations CSS
 - Page web responsive
 - Utilisation du normaliseur : le fichier normalize.css
 - Desktop first
