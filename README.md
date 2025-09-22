@@ -1,5 +1,7 @@
 ## SUIVI DE VOS DEPENSES EN HTML, CSS ET JAVASCRIPT
 
+![Design preview for the project](./img/preview.png)
+
 ## Le challenge
 
 Ce site va permettre à un utilisateur de garder une trace de ses recettes et de ses dépenses. Les transactions peuvent être ajouter et supprimer dans le local storage.
@@ -15,7 +17,7 @@ Ce projet permet :
 
 Lien vers le projet : https://aperbet56.github.io/suivi_recettes_depenses/
 
-## Développez avec
+## Projet développé avec
 
 - Utilisation des balises sémantiques HTML5
 - CSS3
